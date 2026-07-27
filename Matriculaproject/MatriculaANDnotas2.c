@@ -23,8 +23,31 @@ void imprimir_teste(struct Aluno *aluno);
 //----------------------------/INT MAIN/-----------------------------
 int main (){
 
-    cadastrar_pessoas();
+    int escolha;
 
+    printf ("\nOláa, seja bem vindo ao Sistema de Matrícula e Notas 2.0!!!\n"
+    "Para começarmos escolha uma das opções a seguir: (digite somente o número da opção)\n"
+    "Opção [1]: Cadastro de pessoas\n"
+    "Opção [2]: Cadastro de notas e presença\n"
+    "Opção [3]: Análise de desempenho\n\n"
+    " Insira sua opção escolhida: ");
+    scanf ("%d", &escolha);
+
+    //Switch é tipo como se fosse um IF, só que mais otimizado, ele funciona muito bem como interface inicial (que é o caso)!
+    switch (escolha){
+    case 1:
+        cadastrar_pessoas();
+     break;
+    //case 2:
+    //    guardar_informações();
+    // break;
+    //case 3:
+    //    imprimir_análises();
+    // break;
+     default:
+        printf ("\nopção inválida!");
+     break;
+    }
     return 0;
 }
 //-------------------------------//----------------------------------
@@ -58,6 +81,7 @@ void cadastrar_CPF(struct Aluno *aluno){
 //------------------------/IMPRIMIR TESTE/--------------------------
 void imprimir_teste(struct Aluno *aluno){
 
+    printf ("\n\n-------<<Aluno Cadastrado com sucesso!>>-------\n");
     printf ("\nNome do aluno: %s", aluno ->nome);
     printf ("\nIdade do aluno: %d", aluno ->idade);
     printf ("\nO CPF do aluno é: %s\n", aluno ->CPF);
