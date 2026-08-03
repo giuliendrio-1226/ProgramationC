@@ -33,7 +33,7 @@ int main (){
     " Insira sua opção escolhida: ");
     scanf ("%d", &escolha);
 
-    //Switch é tipo como se fosse um IF, só que mais otimizado, ele funciona muito bem como interface inicial (que é o caso)!
+    //Switch é tipo como se fosse um IF, só que mais organizado, ele funciona muito bem como interface inicial (que é o caso)!
     switch (escolha){
     case 1:
         cadastrar_pessoas();
